@@ -6,6 +6,7 @@
 /out-tsc
 /bazel-out
 /environments/enckey.ts
+/Common-UI
 
 # Node
 /node_modules

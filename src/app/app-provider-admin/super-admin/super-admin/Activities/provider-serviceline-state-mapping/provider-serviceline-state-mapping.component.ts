@@ -429,18 +429,18 @@ export class ProviderServicelineStateMappingComponent
     this.isNational = service.isNational;
     console.log('is NATIONAL', this.isNational);
     const alreadyMappedStates: any = [];
-    for (let i = 0; i < this.searchResult.length; i++) {
-      if (
-        this.searchResult[i].serviceProviderID === provider &&
-        this.searchResult[i].serviceID === serviceID
-      ) {
-        const obj = {
-          stateID: this.searchResult[i].stateID,
-          stateName: this.searchResult[i].stateName,
-        };
-        alreadyMappedStates.push(obj);
-      }
-    }
+    // for (let i = 0; i < this.searchResult.length; i++) {
+    //   if (
+    //     this.searchResult[i].serviceProviderID === provider &&
+    //     this.searchResult[i].serviceID === serviceID
+    //   ) {
+    //     const obj = {
+    //       stateID: this.searchResult[i].stateID,
+    //       stateName: this.searchResult[i].stateName,
+    //     };
+    //     alreadyMappedStates.push(obj);
+    //   }
+    // }
 
     const filteredStates = this.states.filter(function (
       stateFromAllState: any,
