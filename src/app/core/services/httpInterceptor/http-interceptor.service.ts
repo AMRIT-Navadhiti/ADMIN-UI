@@ -62,7 +62,9 @@ export class HttpInterceptorService implements HttpInterceptor {
     let modifiedReq = null;
     if (key !== undefined && key !== null) {
       modifiedReq = req.clone({
-        headers: req.headers.set('Authorization', key),
+        headers: req.headers
+          .set('Authorization', key)
+          .set('bypass-tunnel-reminder', 'true'),
       });
     } else {
       modifiedReq = req.clone({
